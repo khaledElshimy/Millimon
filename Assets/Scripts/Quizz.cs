@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.IO;
 using LitJson;
-using ArabicSupport;
 using System;
 using UnityEngine.SceneManagement;
 using System.Text.RegularExpressions;
