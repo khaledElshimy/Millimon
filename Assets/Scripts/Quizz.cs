@@ -44,14 +44,23 @@ public class Quizz : MonoBehaviour
         quizCounter = 1;
         // Use this for initialization
         QuestList = new List<Question>();
-       // quizCounter = PlayerPrefs.GetInt("QCounter");
-      //  quizCounter = quizCounter == 0 ? 1 : quizCounter;
-     //   fixedRased = PlayerPrefs.GetInt("FRased", fixedRased);
-     //   raseed = fixedRased;
-     //   raseedTxt.text = ""+raseed;
-             Color col = new Color();
-         ColorUtility.TryParseHtmlString(PlayerPrefs.GetString("color"), out col);
-        new_color = col;
+        // quizCounter = PlayerPrefs.GetInt("QCounter");
+        //  quizCounter = quizCounter == 0 ? 1 : quizCounter;
+        //   fixedRased = PlayerPrefs.GetInt("FRased", fixedRased);
+        //   raseed = fixedRased;
+        //   raseedTxt.text = ""+raseed;
+        if (quizCounter==1)
+        {
+            new_color = Color.blue;
+
+        }
+        else
+        {
+            Color col = new Color();
+            ColorUtility.TryParseHtmlString(PlayerPrefs.GetString("color"), out col);
+            new_color = col;
+        }
+            
         this.gameObject.GetComponent<Image>().color = new_color;
         this.gameObject.transform.parent.gameObject.GetComponent<Image>().color = new_color;
 
